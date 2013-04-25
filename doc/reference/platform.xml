@@ -133,28 +133,31 @@
               </para>
             </description>
           </method>
-        </method-group>
 
-        <method-group name="public static functions">
+          <!-- platform::get_extension_function_address(const char*) -->
+          <method name="get_extension_function_address">
+            <type>void*</type>
 
-          <!-- platform::platform_count() -->
-          <method name="platforms" specifiers="static">
-            <type>std::vector&lt;<classname>platform</classname>&gt;</type>
+            <parameter name="function_name">
+              <paramtype>const char*</paramtype>
+            </parameter>
+
             <description>
               <para>
-                Returns a vector of all the OpenCL platforms available on the
-                system.
+                Returns the address of the extension function with
+                <code>function_name</code>. Returns <code>0</code> if no
+                function with the given name exists.
               </para>
             </description>
           </method>
 
-          <!-- platform::platform_count() -->
-          <method name="platform_count" specifiers="static">
-            <type>size_t</type>
+          <!-- platform::unload_compiler() -->
+          <method name="unload_compiler">
+            <type>void</type>
+
             <description>
               <para>
-                Returns the total number of OpenCL platforms available on the
-                system.
+                Instructs the implementation to unload any compiler resources.
               </para>
             </description>
           </method>
