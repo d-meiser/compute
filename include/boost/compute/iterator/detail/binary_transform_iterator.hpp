@@ -225,9 +225,8 @@ private:
                                         InputIterator2,
                                         BinaryFunction> &other) const
     {
-        return m_iterator1 == other.m_iterator1 &&
-               m_iterator2 == other.m_iterator2 &&
-               m_transform == other.m_transform;
+		return m_iterator1 == other.m_iterator1 &&
+               m_iterator2 == other.m_iterator2;
     }
 
     void increment()
